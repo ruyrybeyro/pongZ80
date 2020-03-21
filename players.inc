@@ -27,8 +27,8 @@ GODOWN:	LD	A,(IX+1)
 RACKET2_UP:
 	LD	IX,PLAYER2	; point to player 2
 	JR	GOUP
+
 RACKET2_DOWN:
 	LD	IX,PLAYER2	; point to player 2
 	JR	GODOWN
-	RET
 
