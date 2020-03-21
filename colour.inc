@@ -7,7 +7,7 @@ GREEN_PAPER_YELLOW:
 
 YELLOW_BORDER:
         LD      A,6             ; YELLOW
-        OUT     (254),A         ; BORDER
+        OUT     ($FE),A         ; BORDER
         RLCA
         RLCA
         RLCA
