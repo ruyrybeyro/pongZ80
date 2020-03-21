@@ -1,0 +1,13 @@
+
+; rotine CLS ROM
+CL_ALL	EQU	$0DAF
+BEEPER	EQU	$03B5
+
+; lines in the inferior zone of screen
+BORDCR	EQU	$5C48
+DF_SZ	EQU	$5C6B
+;FRAMES	EQU	$5C78
+UDG	EQU	$5C7B
+ATTR_P	EQU	$5C8D
+ATTR_T  EQU	$5C8F
+

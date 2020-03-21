@@ -1,0 +1,5 @@
+;CLOSE_GAME:
+	;LD	A,2
+	;LD	(DF_SZ),A
+	;RET
+

@@ -1,0 +1,30 @@
+
+INIT_GAME:
+	CALL	SETUP_UDGS
+	CALL	GREEN_PAPER_YELLOW
+	CALL	YELLOW_BORDER
+	; clear screen
+	CALL	CL_ALL
+	XOR	A
+	;LD	(DF_SZ),A
+	
+	; init scores to 0
+	LD	A,"0"
+	LD	(SCORE1),A
+	LD	(SCORE2),A
+	
+	; init rackets to center
+	LD	IX,PLAYER1
+	CALL	INIT_PLAYER
+	LD	IX,PLAYER2
+	CALL	INIT_PLAYER
+	RET
+
+INIT_PLAYER:
+	LD	(IX-2),10
+	LD	(IX+1),11
+	LD	(IX+4),12
+	LD	(IX+7),13
+	LD	(IX+10),14
+	RET
+
