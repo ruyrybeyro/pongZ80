@@ -6,8 +6,8 @@ READ_KEMPSTON:
 	JR	NZ,KEND	; NO KEMPSTON
 
 	LD	A,C
-	AND	$81	; ANY fire pressed
-	JR	KPLAYER2 ; controls 2nd player
+	AND	$81	    ; ANY fire pressed
+	JR	NZ,KPLAYER2 ; controls 2nd player
 
 ; ===================== 1st player controls ===============
 	LD	A,C
