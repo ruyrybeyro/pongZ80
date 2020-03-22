@@ -8,3 +8,6 @@ pasmo --tapbas pong.asm pong.tap
 
 Q up, A down first  player
 O up, L down second player
+
+This is written as an assembly programming tutorial. Some areas could be optimized, and it is intentional them being as it is.
+
