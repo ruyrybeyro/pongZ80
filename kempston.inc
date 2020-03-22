@@ -2,7 +2,7 @@
 READ_KEMPSTON:
 	LD	A,(JOY)
 	CP	0
-	JR	Z,SKIPJOY ; No Joystick "lock"
+	JR	Z,KEND ; No Joystick "lock"
 		
 
 	IN	A,($1f)
@@ -10,7 +10,6 @@ READ_KEMPSTON:
 	AND	$60
 	JR	NZ,NOJOY    ; NO KEMPSTON
 
-SKIPJOY:
 	LD	A,C
 	AND	$90	    ; ANY fire pressed
 	JR	NZ,KPLAYER2 ; controls 2nd player
