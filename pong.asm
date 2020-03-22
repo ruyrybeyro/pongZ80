@@ -5,6 +5,7 @@
 LOOP:	HALT
 	HALT
 	CALL	READ_KEYS
+	CALL	READ_KEMPSTON
 	CALL	BALL_MOVE
 	CALL	PRINT_CYCLE
 	CALL	COLISION_DETECTION
@@ -21,6 +22,7 @@ LOOP:	HALT
 	INCLUDE	score.inc
 	INCLUDE	print.inc
 	INCLUDE	keyboard.inc
+	INCLUDE kempston.inc
 	INCLUDE	beeper.inc
 	INCLUDE	colour.inc
 	INCLUDE	vars.inc
