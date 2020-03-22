@@ -1,11 +1,12 @@
 
-; print objects of screen in vars
+; print objects of screen present in memory
 ; each object 3 bytes
 ; 1st - CHAR
 ; 2nd - Y position
 ; 3nd - X position
 ;
 ; if 1st/CHAR is 0, routine ends printing objects
+; (0 marker of end of "array")
 ;
 PRINT_CYCLE:
 	LD	IX,BEGIN_PRINT
