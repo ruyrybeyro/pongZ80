@@ -1,10 +1,15 @@
 
 READ_KEMPSTON:
+	LD	A,(JOY)
+	CP	0
+	JR	Z,NOJOYHERE ; No Joystick
+
 	IN	A,($1f)
 	LD	C,A
 	AND	$60
-	JR	NZ,KEND	; NO KEMPSTON
+	JR	NZ,NOJOY    ; NO KEMPSTON
 
+NOJOYHERE:
 	LD	A,C
 	AND	$90	    ; ANY fire pressed
 	JR	NZ,KPLAYER2 ; controls 2nd player
@@ -38,9 +43,13 @@ KDOWN2:
 	AND     $04     ; DOWN
 	JR      Z,KEND
 	CALL    RACKET2_DOWN
+	JR	KEND
 
 ; ================ end of 2nd player controls ==============
 
+NOJOY:			; coming here due to "noise"
+	XOR	A	; locking down joystick use due to
+	LD	(JOY),A ; floating bus noise
 KEND:
 	RET
 

@@ -2,6 +2,11 @@
 ; seed for "RANDOM" number
 SEED	DEFW	0
 
+; Kempston joystick use "lock"
+; if 1 can be used
+; once it is 0, it cannot
+JOY	DEFB	1
+
 ; X direction of ball $FF left, 1 right
 BALLVX:	DEFB	0	; VX
 ; Y direction of ball $FF left, 1 right
