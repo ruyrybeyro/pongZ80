@@ -1,7 +1,6 @@
 
 READ_KEMPSTON:
-	LD	C,$1F
-	IN	A,(C)
+	IN	A,($1f)
 	AND	$60
 	JR	NZ,KEND	; NO KEMPSTON
 
