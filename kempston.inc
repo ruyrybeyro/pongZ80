@@ -50,6 +50,8 @@ KDOWN2:
 NOJOY:			; coming here due to "noise"
 	XOR	A	; locking down joystick use due to
 	LD	(JOY),A ; floating bus noise
+			; and/or
+			; it not existing at all
 KEND:
 	RET
 
